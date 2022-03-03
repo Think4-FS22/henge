@@ -8,9 +8,21 @@ let bounds = {
   bottom: 47.024504,
 };
 
+// let bounds = {
+//   left: 7.438,
+//   top: 46.9523,
+//   right: 7.4613,
+//   bottom: 46.9411,
+// };
+
+// let center = {
+//   lat: 47.050167,
+//   lon: 8.309307,
+// };
+
 let center = {
-  lat: 47.050167,
-  lon: 8.309307,
+  lon: bounds.left + 0.5 * (bounds.right - bounds.left),
+  lat: bounds.bottom + 0.5 * (bounds.top - bounds.bottom),
 };
 
 // let sunriseHdg;

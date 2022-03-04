@@ -118,7 +118,8 @@ function calcSunDir(date, lon, lat) {
   var sunPos = SunCalc.getPosition(times.sunrise, lat, lon);
   let sunHdg = degrees(sunPos.azimuth);
   let sunDir = createVector(100, 0);
-  sunDir.rotate(sunHdg - 90);
+  // sunDir.rotate(sunHdg - 90);
+  sunDir.rotate(-sunHdg - 90);
 
   return sunDir;
 }
